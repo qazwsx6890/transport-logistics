@@ -8,6 +8,7 @@ import logging
 import json
 from logging.handlers import RotatingFileHandler
 import os
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -40,6 +41,41 @@ logger = logging.getLogger('transport_logistics')
 logger.setLevel(logging.DEBUG)
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
+
+# ========== КЭШИРОВАНИЕ И ЗАМЕРЫ ВРЕМЕНИ (ЭТАП 12) ==========
+class SimpleCache:
+    """Простой кэш в памяти (аналог Redis)"""
+    def __init__(self, ttl_seconds=60):
+        self.cache = {}
+        self.ttl = ttl_seconds
+    
+    def get(self, key):
+        if key in self.cache:
+            data, timestamp = self.cache[key]
+            if time.time() - timestamp < self.ttl:
+                return data
+            else:
+                del self.cache[key]
+        return None
+    
+    def set(self, key, value):
+        self.cache[key] = (value, time.time())
+    
+    def clear(self):
+        self.cache.clear()
+
+cache = SimpleCache(ttl_seconds=30)
+
+def measure_time(func):
+    """Декоратор для замера времени выполнения"""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        elapsed = (time.time() - start) * 1000
+        logger.info(f"⚡ {func.__name__} выполнен за {elapsed:.2f} мс")
+        return result
+    return wrapper
 
 # ========== RETRY ==========
 def retry(max_attempts=3, delay_seconds=1):
@@ -183,6 +219,22 @@ HTML_TEMPLATE = '''
                         <tbody id="historyTable"><tr><td colspan="6" class="text-center">Нет заявок</td></tr></tbody>
                     </table>
                 </div>
+                <hr>
+                <h5><i class="fas fa-tachometer-alt me-2" style="color: #667eea;"></i>Производительность</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-custom">
+                            <p>⚡ <strong>Обычный запрос:</strong> <span id="normalTime">-</span> мс</p>
+                            <button class="btn btn-primary btn-sm" onclick="testNormalRequest()">Тест обычного запроса</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-custom">
+                            <p>🚀 <strong>Кэшированный запрос:</strong> <span id="cachedTime">-</span> мс</p>
+                            <button class="btn btn-primary btn-sm" onclick="testCachedRequest()">Тест кэшированного запроса</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -230,12 +282,28 @@ HTML_TEMPLATE = '''
             loadCircuitStatus();
         }
         
+        async function testNormalRequest() {
+            const start = performance.now();
+            await fetch('/api/requests');
+            const end = performance.now();
+            document.getElementById('normalTime').innerHTML = (end - start).toFixed(2);
+            addLog(`📊 Обычный запрос: ${(end - start).toFixed(2)} мс`, 'info');
+        }
+        
+        async function testCachedRequest() {
+            const start = performance.now();
+            await fetch('/api/requests-optimized');
+            const end = performance.now();
+            document.getElementById('cachedTime').innerHTML = (end - start).toFixed(2);
+            addLog(`🚀 Кэшированный запрос: ${(end - start).toFixed(2)} мс`, 'info');
+        }
+        
         async function loadHistory() {
             const response = await fetch('/api/requests');
             const requests = await response.json();
             const tbody = document.getElementById('historyTable');
             if (requests.length === 0) tbody.innerHTML = '<tr><td colspan="6" class="text-center">Нет заявок</td></tr>';
-            else tbody.innerHTML = requests.map(r => `<tr style="background: ${r.status === 'error' ? '#fff5f5' : '#f0fff4'}"><td><code>${r.id}</code></td><td>${r.date || '-'}</td><td>${r.weight} кг</td><td>${r.pickup} → ${r.delivery}</td><td><span class="badge-custom ${r.status === 'success' ? 'badge-success' : 'badge-error'}">${r.status}</span></td><td style="color: #dc3545;">${r.error || '-'}</td></tr>`).join('');
+            else tbody.innerHTML = requests.map(r => `<tr style="background: ${r.status === 'error' ? '#fff5f5' : '#f0fff4'}">\n<td><code>${r.id}</code></td>\n<td>${r.date || '-'}</td>\n<td>${r.weight} кг</td>\n<td>${r.pickup} → ${r.delivery}</td>\n<td><span class="badge-custom ${r.status === 'success' ? 'badge-success' : 'badge-error'}">${r.status}</span></td>\n<td style="color: #dc3545;">${r.error || '-'}</td>\n</tr>`).join('');
         }
         
         async function loadCircuitStatus() {
@@ -293,7 +361,6 @@ def create_request():
     try:
         result = circuit_breaker.call(call_external_service_with_retry, force_error)
         
-        # ТОЛЬКО ПРИ УСПЕХЕ сохраняем заявку
         request_data = {
             'id': request_id,
             'weight': data.get('weight'),
@@ -305,6 +372,9 @@ def create_request():
         }
         requests_storage.insert(0, request_data)
         
+        # Очищаем кэш после создания новой заявки
+        cache.clear()
+        
         return jsonify({
             'status': 'success',
             'request_id': request_id,
@@ -314,13 +384,28 @@ def create_request():
     except Exception as e:
         error_msg = str(e)
         logger.error(f"Ошибка заявки {request_id}: {error_msg}")
-        
-        # НЕ СОХРАНЯЕМ заявку с ошибкой (компенсация не нужна)
         return jsonify({'status': 'error', 'error': error_msg}), 500
 
+# ========== API С КЭШИРОВАНИЕМ (ЭТАП 12) ==========
 @app.route('/api/requests', methods=['GET'])
+@measure_time
 def get_requests():
+    """Обычный запрос без кэша"""
     return jsonify(requests_storage[:20])
+
+@app.route('/api/requests-optimized', methods=['GET'])
+@measure_time
+def get_requests_optimized():
+    """Оптимизированный запрос с кэшированием"""
+    cached_data = cache.get('requests_list')
+    if cached_data:
+        logger.info("📦 Данные из кэша")
+        return jsonify(cached_data)
+    
+    data = requests_storage[:20]
+    cache.set('requests_list', data)
+    logger.info("💾 Данные из хранилища (кэш обновлён)")
+    return jsonify(data)
 
 @app.route('/api/circuit-status', methods=['GET'])
 def get_circuit_status():
@@ -344,13 +429,18 @@ def index():
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("ТРАНСПОРТНАЯ ЛОГИСТИКА - ЗАПУЩЕНА")
+    print("ТРАНСПОРТНАЯ ЛОГИСТИКА - ЗАПУЩЕНА (с оптимизацией)")
     print("=" * 60)
     print("Логи: logs/app.log (JSON формат, UTF-8)")
     print("Retry: 3 попытки с задержкой")
     print("Circuit Breaker: после 2 сбоев -> OPEN на 10 сек")
     print("Компенсация: заявки с ошибкой НЕ сохраняются")
     print("Защита от дубликатов: 2 секунды между одинаковыми заявками")
+    print("")
+    print("⚡ ОПТИМИЗАЦИЯ ПРОИЗВОДИТЕЛЬНОСТИ:")
+    print("   - Кэширование списка заявок (TTL 30 сек)")
+    print("   - Замеры времени выполнения (декоратор @measure_time)")
+    print("   - Очистка кэша при создании новой заявки")
     print("")
     print("Открой браузер: http://localhost:5000")
     print("=" * 60)
