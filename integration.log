@@ -1,0 +1,92 @@
+2026-05-25 20:39:00,770 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:39:00,770 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:39:00,771 - INFO -  * Restarting with stat
+2026-05-25 20:39:00,931 - WARNING -  * Debugger is active!
+2026-05-25 20:39:00,933 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 20:39:32,773 - INFO - 127.0.0.1 - - [25/May/2026 20:39:32] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:39:37,084 - INFO - 127.0.0.1 - - [25/May/2026 20:39:37] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:40:33,130 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:40:33,130 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:40:33,131 - INFO -  * Restarting with stat
+2026-05-25 20:40:33,293 - WARNING -  * Debugger is active!
+2026-05-25 20:40:33,294 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 20:42:14,686 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:42:14,686 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:42:14,687 - INFO -  * Restarting with stat
+2026-05-25 20:42:14,847 - WARNING -  * Debugger is active!
+2026-05-25 20:42:14,848 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 20:42:52,991 - INFO - 127.0.0.1 - - [25/May/2026 20:42:52] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:42:57,295 - INFO - 127.0.0.1 - - [25/May/2026 20:42:57] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:44:00,704 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:44:00,704 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:44:00,705 - INFO -  * Restarting with stat
+2026-05-25 20:44:00,866 - WARNING -  * Debugger is active!
+2026-05-25 20:44:00,868 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 20:44:10,134 - INFO - 127.0.0.1 - - [25/May/2026 20:44:10] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:44:14,432 - INFO - 127.0.0.1 - - [25/May/2026 20:44:14] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:47:16,316 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:47:16,317 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:47:16,317 - INFO -  * Restarting with stat
+2026-05-25 20:47:16,486 - WARNING -  * Debugger is active!
+2026-05-25 20:47:16,487 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 20:47:38,065 - INFO - 127.0.0.1 - - [25/May/2026 20:47:38] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:47:44,415 - INFO - 127.0.0.1 - - [25/May/2026 20:47:44] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:48:37,233 - INFO - 127.0.0.1 - - [25/May/2026 20:48:37] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:48:43,577 - INFO - 127.0.0.1 - - [25/May/2026 20:48:43] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:52:58,759 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:52:58,760 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:52:58,760 - INFO -  * Restarting with stat
+2026-05-25 20:52:58,918 - WARNING -  * Debugger is active!
+2026-05-25 20:52:58,919 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 20:54:32,159 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:54:32,159 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:54:32,160 - INFO -  * Restarting with stat
+2026-05-25 20:54:32,320 - WARNING -  * Debugger is active!
+2026-05-25 20:54:32,321 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 20:54:50,829 - INFO - 127.0.0.1 - - [25/May/2026 20:54:50] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:54:57,228 - INFO - 127.0.0.1 - - [25/May/2026 20:54:57] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:55:10,983 - INFO - 127.0.0.1 - - [25/May/2026 20:55:10] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:55:17,403 - INFO - 127.0.0.1 - - [25/May/2026 20:55:17] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:55:28,961 - INFO - 127.0.0.1 - - [25/May/2026 20:55:28] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 20:55:35,369 - INFO - 127.0.0.1 - - [25/May/2026 20:55:35] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 20:59:50,150 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 20:59:50,150 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 20:59:50,151 - INFO -  * Restarting with stat
+2026-05-25 20:59:50,312 - WARNING -  * Debugger is active!
+2026-05-25 20:59:50,314 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 21:00:17,732 - INFO - 127.0.0.1 - - [25/May/2026 21:00:17] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 21:00:24,079 - INFO - 127.0.0.1 - - [25/May/2026 21:00:24] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 21:00:30,074 - INFO - 127.0.0.1 - - [25/May/2026 21:00:30] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 21:00:36,441 - INFO - 127.0.0.1 - - [25/May/2026 21:00:36] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 21:03:33,207 - INFO - 127.0.0.1 - - [25/May/2026 21:03:33] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 21:03:39,617 - INFO - 127.0.0.1 - - [25/May/2026 21:03:39] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 21:07:44,699 - INFO - 127.0.0.1 - - [25/May/2026 21:07:44] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 21:07:51,102 - INFO - 127.0.0.1 - - [25/May/2026 21:07:51] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -
+2026-05-25 21:15:34,547 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 21:15:34,547 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 21:15:34,547 - INFO -  * Restarting with stat
+2026-05-25 21:15:34,707 - WARNING -  * Debugger is active!
+2026-05-25 21:15:34,708 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 21:16:12,110 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 21:16:12,110 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 21:16:12,110 - INFO -  * Restarting with stat
+2026-05-25 21:16:12,276 - WARNING -  * Debugger is active!
+2026-05-25 21:16:12,277 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 21:18:35,205 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2026-05-25 21:18:35,205 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-25 21:18:35,206 - INFO -  * Restarting with stat
+2026-05-25 21:18:35,378 - WARNING -  * Debugger is active!
+2026-05-25 21:18:35,379 - INFO -  * Debugger PIN: 961-012-907
+2026-05-25 21:19:59,171 - INFO - 127.0.0.1 - - [25/May/2026 21:19:59] "OPTIONS /api/start-order HTTP/1.1" 200 -
+2026-05-25 21:20:05,535 - INFO - 127.0.0.1 - - [25/May/2026 21:20:05] "[35m[1mPOST /api/start-order HTTP/1.1[0m" 500 -

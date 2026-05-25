@@ -1,0 +1,347 @@
+{"timestamp": "2026-05-25T22:19:16.762167", "level": "INFO", "module": "app", "message": "Создание заявки 7c92179c (попытка 1)", "request_id": "7c92179c"}
+{"timestamp": "2026-05-25T22:19:16.762405", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:19:16.762529", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:19:16.762648", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:19:17.763137", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:19:17.763530", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:19:17.763685", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:19:19.764205", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:19:19.764383", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:19:19.764505", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:19:19.764661", "level": "ERROR", "module": "app", "message": "Ошибка заявки 7c92179c: Сервис транспорта временно недоступен", "request_id": "7c92179c"}
+{"timestamp": "2026-05-25T22:19:19.764830", "level": "WARNING", "module": "app", "message": "Компенсация заявки 7c92179c: откат транзакции"}
+{"timestamp": "2026-05-25T22:19:19.764923", "level": "INFO", "module": "app", "message": "Заявка 7c92179c откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:19:21.078648", "level": "INFO", "module": "app", "message": "Создание заявки 1e476380 (попытка 2)", "request_id": "1e476380"}
+{"timestamp": "2026-05-25T22:19:21.078847", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:19:21.078963", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:19:21.079085", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:19:22.079740", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:19:22.079991", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:19:22.080164", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:19:24.080739", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:19:24.080926", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:19:24.081044", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:19:24.081150", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:19:24.081247", "level": "ERROR", "module": "app", "message": "Ошибка заявки 1e476380: Сервис транспорта временно недоступен", "request_id": "1e476380"}
+{"timestamp": "2026-05-25T22:19:24.081334", "level": "WARNING", "module": "app", "message": "Компенсация заявки 1e476380: откат транзакции"}
+{"timestamp": "2026-05-25T22:19:24.081457", "level": "INFO", "module": "app", "message": "Заявка 1e476380 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:19:26.390776", "level": "INFO", "module": "app", "message": "Создание заявки a8f8a10c (попытка 3)", "request_id": "a8f8a10c"}
+{"timestamp": "2026-05-25T22:19:26.390967", "level": "ERROR", "module": "app", "message": "Ошибка заявки a8f8a10c: Circuit Breaker OPEN. Повторите через 8 сек", "request_id": "a8f8a10c"}
+{"timestamp": "2026-05-25T22:19:26.391076", "level": "WARNING", "module": "app", "message": "Компенсация заявки a8f8a10c: откат транзакции"}
+{"timestamp": "2026-05-25T22:19:26.391171", "level": "INFO", "module": "app", "message": "Заявка a8f8a10c откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:20:04.487440", "level": "INFO", "module": "app", "message": "Создание заявки ab2fcd84 (попытка 1)", "request_id": "ab2fcd84"}
+{"timestamp": "2026-05-25T22:20:04.487662", "level": "INFO", "module": "app", "message": "Circuit Breaker -> HALF_OPEN (прошло 40 сек)"}
+{"timestamp": "2026-05-25T22:20:04.487772", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:20:04.487870", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:04.487967", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:05.337250", "level": "INFO", "module": "app", "message": "Создание заявки 49069b41 (попытка 1)", "request_id": "49069b41"}
+{"timestamp": "2026-05-25T22:20:05.337392", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:20:05.337509", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:05.337648", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:05.488391", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:20:05.488576", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:05.488683", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:05.980014", "level": "INFO", "module": "app", "message": "Создание заявки 20a86413 (попытка 1)", "request_id": "20a86413"}
+{"timestamp": "2026-05-25T22:20:05.980151", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:20:05.980254", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:05.980354", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:06.338013", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:20:06.338187", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:06.338319", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:06.981032", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:20:06.981299", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:06.981441", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:07.488924", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:20:07.489101", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:07.489235", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:07.489350", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 3)"}
+{"timestamp": "2026-05-25T22:20:07.489457", "level": "ERROR", "module": "app", "message": "Ошибка заявки ab2fcd84: Сервис транспорта временно недоступен", "request_id": "ab2fcd84"}
+{"timestamp": "2026-05-25T22:20:07.489571", "level": "WARNING", "module": "app", "message": "Компенсация заявки ab2fcd84: откат транзакции"}
+{"timestamp": "2026-05-25T22:20:07.489673", "level": "INFO", "module": "app", "message": "Заявка ab2fcd84 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:20:08.338802", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:20:08.338964", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:08.339106", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:08.339241", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 4)"}
+{"timestamp": "2026-05-25T22:20:08.339359", "level": "ERROR", "module": "app", "message": "Ошибка заявки 49069b41: Сервис транспорта временно недоступен", "request_id": "49069b41"}
+{"timestamp": "2026-05-25T22:20:08.339488", "level": "WARNING", "module": "app", "message": "Компенсация заявки 49069b41: откат транзакции"}
+{"timestamp": "2026-05-25T22:20:08.339614", "level": "INFO", "module": "app", "message": "Заявка 49069b41 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:20:08.806080", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:20:08.981583", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:20:08.981746", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:20:08.981866", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:20:08.981988", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 5)"}
+{"timestamp": "2026-05-25T22:20:08.982100", "level": "ERROR", "module": "app", "message": "Ошибка заявки 20a86413: Сервис транспорта временно недоступен", "request_id": "20a86413"}
+{"timestamp": "2026-05-25T22:20:08.982206", "level": "WARNING", "module": "app", "message": "Компенсация заявки 20a86413: откат транзакции"}
+{"timestamp": "2026-05-25T22:20:08.982298", "level": "INFO", "module": "app", "message": "Заявка 20a86413 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:20:09.655982", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:20:10.465102", "level": "INFO", "module": "app", "message": "Создание заявки 81706e48 (попытка 2)", "request_id": "81706e48"}
+{"timestamp": "2026-05-25T22:20:10.465284", "level": "ERROR", "module": "app", "message": "Ошибка заявки 81706e48: Circuit Breaker OPEN. Повторите через 9 сек", "request_id": "81706e48"}
+{"timestamp": "2026-05-25T22:20:10.465401", "level": "WARNING", "module": "app", "message": "Компенсация заявки 81706e48: откат транзакции"}
+{"timestamp": "2026-05-25T22:20:10.465500", "level": "INFO", "module": "app", "message": "Заявка 81706e48 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:20:11.764038", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:20:12.072021", "level": "INFO", "module": "app", "message": "Создание заявки 45900e1e (попытка 3)", "request_id": "45900e1e"}
+{"timestamp": "2026-05-25T22:20:12.072210", "level": "ERROR", "module": "app", "message": "Ошибка заявки 45900e1e: Circuit Breaker OPEN. Повторите через 7 сек", "request_id": "45900e1e"}
+{"timestamp": "2026-05-25T22:20:12.072347", "level": "WARNING", "module": "app", "message": "Компенсация заявки 45900e1e: откат транзакции"}
+{"timestamp": "2026-05-25T22:20:12.072672", "level": "INFO", "module": "app", "message": "Заявка 45900e1e откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:20:12.468326", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:21:27.298310", "level": "INFO", "module": "app", "message": "Circuit Breaker сброшен"}
+{"timestamp": "2026-05-25T22:21:47.651924", "level": "INFO", "module": "app", "message": "Создание заявки 2830bc83 (попытка 1)", "request_id": "2830bc83"}
+{"timestamp": "2026-05-25T22:21:47.652088", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:21:47.652203", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=False)"}
+{"timestamp": "2026-05-25T22:21:47.652332", "level": "INFO", "module": "app", "message": "Заявка 2830bc83 успешно создана", "request_id": "2830bc83"}
+{"timestamp": "2026-05-25T22:22:09.962428", "level": "INFO", "module": "app", "message": "Создание заявки 05f0b077 (попытка 1)", "request_id": "05f0b077"}
+{"timestamp": "2026-05-25T22:22:09.962584", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:22:09.962685", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:22:09.962782", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:22:10.365639", "level": "INFO", "module": "app", "message": "Создание заявки 0b5a3f3f (попытка 1)", "request_id": "0b5a3f3f"}
+{"timestamp": "2026-05-25T22:22:10.365807", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:22:10.365917", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:22:10.366023", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:22:10.965656", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:22:10.965908", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:22:10.966069", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:22:11.366336", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:22:11.366483", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:22:11.366595", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:22:12.966354", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:22:12.966534", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:22:12.966650", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:22:12.966760", "level": "ERROR", "module": "app", "message": "Ошибка заявки 05f0b077: Сервис транспорта временно недоступен", "request_id": "05f0b077"}
+{"timestamp": "2026-05-25T22:22:12.966862", "level": "WARNING", "module": "app", "message": "Компенсация заявки 05f0b077: откат транзакции"}
+{"timestamp": "2026-05-25T22:22:12.966951", "level": "INFO", "module": "app", "message": "Заявка 05f0b077 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:22:13.367072", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:22:13.367273", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:22:13.367391", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:22:13.367519", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:22:13.367634", "level": "ERROR", "module": "app", "message": "Ошибка заявки 0b5a3f3f: Сервис транспорта временно недоступен", "request_id": "0b5a3f3f"}
+{"timestamp": "2026-05-25T22:22:13.367739", "level": "WARNING", "module": "app", "message": "Компенсация заявки 0b5a3f3f: откат транзакции"}
+{"timestamp": "2026-05-25T22:22:13.367845", "level": "INFO", "module": "app", "message": "Заявка 0b5a3f3f откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:22:14.293572", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:22:14.536820", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:22:16.296121", "level": "INFO", "module": "app", "message": "Создание заявки c528662a (попытка 3)", "request_id": "c528662a"}
+{"timestamp": "2026-05-25T22:22:16.296303", "level": "ERROR", "module": "app", "message": "Ошибка заявки c528662a: Circuit Breaker OPEN. Повторите через 7 сек", "request_id": "c528662a"}
+{"timestamp": "2026-05-25T22:22:16.296428", "level": "WARNING", "module": "app", "message": "Компенсация заявки c528662a: откат транзакции"}
+{"timestamp": "2026-05-25T22:22:16.296546", "level": "INFO", "module": "app", "message": "Заявка c528662a откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:22:16.857458", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:23:06.998765", "level": "INFO", "module": "app", "message": "Circuit Breaker сброшен"}
+{"timestamp": "2026-05-25T22:23:17.720146", "level": "INFO", "module": "app", "message": "Создание заявки d4915c92 (попытка 1)", "request_id": "d4915c92"}
+{"timestamp": "2026-05-25T22:23:17.720293", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:23:17.720397", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=False)"}
+{"timestamp": "2026-05-25T22:23:17.720510", "level": "INFO", "module": "app", "message": "Заявка d4915c92 успешно создана", "request_id": "d4915c92"}
+{"timestamp": "2026-05-25T22:23:35.863456", "level": "INFO", "module": "app", "message": "Создание заявки 2580eb0f (попытка 1)", "request_id": "2580eb0f"}
+{"timestamp": "2026-05-25T22:23:35.863599", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:23:35.863701", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:23:35.863799", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:23:35.963344", "level": "INFO", "module": "app", "message": "Создание заявки 7d2fcb20 (попытка 1)", "request_id": "7d2fcb20"}
+{"timestamp": "2026-05-25T22:23:35.963473", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:23:35.963575", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:23:35.963672", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:23:36.864516", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:23:36.864696", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:23:36.864807", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:23:36.964450", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:23:36.964579", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:23:36.964696", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:23:38.865873", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:23:38.866065", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:23:38.866217", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:23:38.866430", "level": "ERROR", "module": "app", "message": "Ошибка заявки 2580eb0f: Сервис транспорта временно недоступен", "request_id": "2580eb0f"}
+{"timestamp": "2026-05-25T22:23:38.866562", "level": "WARNING", "module": "app", "message": "Компенсация заявки 2580eb0f: откат транзакции"}
+{"timestamp": "2026-05-25T22:23:38.866665", "level": "INFO", "module": "app", "message": "Заявка 2580eb0f откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:23:38.967885", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:23:38.968099", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:23:38.968253", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:23:38.968399", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:23:38.968531", "level": "ERROR", "module": "app", "message": "Ошибка заявки 7d2fcb20: Сервис транспорта временно недоступен", "request_id": "7d2fcb20"}
+{"timestamp": "2026-05-25T22:23:38.968653", "level": "WARNING", "module": "app", "message": "Компенсация заявки 7d2fcb20: откат транзакции"}
+{"timestamp": "2026-05-25T22:23:38.968772", "level": "INFO", "module": "app", "message": "Заявка 7d2fcb20 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:23:40.180368", "level": "INFO", "module": "app", "message": "Создание заявки 7e4d0df8 (попытка 2)", "request_id": "7e4d0df8"}
+{"timestamp": "2026-05-25T22:23:40.180551", "level": "ERROR", "module": "app", "message": "Ошибка заявки 7e4d0df8: Circuit Breaker OPEN. Повторите через 9 сек", "request_id": "7e4d0df8"}
+{"timestamp": "2026-05-25T22:23:40.180671", "level": "WARNING", "module": "app", "message": "Компенсация заявки 7e4d0df8: откат транзакции"}
+{"timestamp": "2026-05-25T22:23:40.180784", "level": "INFO", "module": "app", "message": "Заявка 7e4d0df8 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:23:40.280149", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:23:42.500449", "level": "INFO", "module": "app", "message": "Создание заявки aa788215 (попытка 3)", "request_id": "aa788215"}
+{"timestamp": "2026-05-25T22:23:42.500668", "level": "ERROR", "module": "app", "message": "Ошибка заявки aa788215: Circuit Breaker OPEN. Повторите через 6 сек", "request_id": "aa788215"}
+{"timestamp": "2026-05-25T22:23:42.500779", "level": "WARNING", "module": "app", "message": "Компенсация заявки aa788215: откат транзакции"}
+{"timestamp": "2026-05-25T22:23:42.500878", "level": "INFO", "module": "app", "message": "Заявка aa788215 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:23:42.605904", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:27:23.761243", "level": "INFO", "module": "app", "message": "Создание заявки 04c7fa3e (попытка 1)", "request_id": "04c7fa3e"}
+{"timestamp": "2026-05-25T22:27:23.761469", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:27:23.761598", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:27:23.761765", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:27:24.454983", "level": "INFO", "module": "app", "message": "Создание заявки 2dffb6c1 (попытка 1)", "request_id": "2dffb6c1"}
+{"timestamp": "2026-05-25T22:27:24.455143", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:27:24.455252", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:27:24.455387", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:27:24.762460", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:27:24.762645", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:27:24.762765", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:27:25.455953", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:27:25.456169", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:27:25.456299", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:27:26.763237", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:27:26.763497", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:27:26.763785", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:27:26.764393", "level": "ERROR", "module": "app", "message": "Ошибка заявки 04c7fa3e: Сервис транспорта временно недоступен", "request_id": "04c7fa3e"}
+{"timestamp": "2026-05-25T22:27:26.764990", "level": "WARNING", "module": "app", "message": "Компенсация заявки 04c7fa3e: откат транзакции"}
+{"timestamp": "2026-05-25T22:27:26.765235", "level": "INFO", "module": "app", "message": "Заявка 04c7fa3e откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:27:27.456641", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:27:27.456816", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:27:27.456931", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:27:27.457040", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:27:27.457159", "level": "ERROR", "module": "app", "message": "Ошибка заявки 2dffb6c1: Сервис транспорта временно недоступен", "request_id": "2dffb6c1"}
+{"timestamp": "2026-05-25T22:27:27.457266", "level": "WARNING", "module": "app", "message": "Компенсация заявки 2dffb6c1: откат транзакции"}
+{"timestamp": "2026-05-25T22:27:27.457372", "level": "INFO", "module": "app", "message": "Заявка 2dffb6c1 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:27:28.096939", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:27:28.469974", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:27:30.151971", "level": "INFO", "module": "app", "message": "Создание заявки be62db0f (попытка 3)", "request_id": "be62db0f"}
+{"timestamp": "2026-05-25T22:27:30.152150", "level": "ERROR", "module": "app", "message": "Ошибка заявки be62db0f: Circuit Breaker OPEN. Повторите через 7 сек", "request_id": "be62db0f"}
+{"timestamp": "2026-05-25T22:27:30.152273", "level": "WARNING", "module": "app", "message": "Компенсация заявки be62db0f: откат транзакции"}
+{"timestamp": "2026-05-25T22:27:30.152430", "level": "INFO", "module": "app", "message": "Заявка be62db0f откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:27:30.710799", "level": "WARNING", "module": "app", "message": "Обнаружен дубликат заявки за 2 секунды"}
+{"timestamp": "2026-05-25T22:33:39.786844", "level": "INFO", "module": "app", "message": "Создание заявки 113a161a"}
+{"timestamp": "2026-05-25T22:33:39.787061", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:33:39.787178", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:33:39.787289", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:40.787448", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:33:40.787597", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:33:40.787707", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:42.787944", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:33:42.788248", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:33:42.788396", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:42.788544", "level": "ERROR", "module": "app", "message": "Ошибка заявки 113a161a: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:42.788653", "level": "WARNING", "module": "app", "message": "Компенсация заявки 113a161a: откат транзакции"}
+{"timestamp": "2026-05-25T22:33:42.788742", "level": "INFO", "module": "app", "message": "Заявка 113a161a откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:33:43.813379", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:33:45.826860", "level": "INFO", "module": "app", "message": "Создание заявки f9c712fc"}
+{"timestamp": "2026-05-25T22:33:45.827021", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:33:45.827128", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:33:45.827239", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:46.827569", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:33:46.827848", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:33:46.828008", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:48.828450", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:33:48.828617", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:33:48.828728", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:48.828867", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:33:48.828966", "level": "ERROR", "module": "app", "message": "Ошибка заявки f9c712fc: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:33:48.829060", "level": "WARNING", "module": "app", "message": "Компенсация заявки f9c712fc: откат транзакции"}
+{"timestamp": "2026-05-25T22:33:48.829155", "level": "INFO", "module": "app", "message": "Заявка f9c712fc откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:35:01.849356", "level": "INFO", "module": "app", "message": "Создание заявки 8e285189"}
+{"timestamp": "2026-05-25T22:35:01.849530", "level": "INFO", "module": "app", "message": "Circuit Breaker -> HALF_OPEN (прошло 73 сек)"}
+{"timestamp": "2026-05-25T22:35:01.849647", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:35:01.849768", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=False)"}
+{"timestamp": "2026-05-25T22:35:01.849898", "level": "INFO", "module": "app", "message": "Circuit Breaker -> CLOSED (запрос успешен)"}
+{"timestamp": "2026-05-25T22:35:02.009672", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:35:03.015289", "level": "INFO", "module": "app", "message": "Создание заявки 13996f3f"}
+{"timestamp": "2026-05-25T22:35:03.015442", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:35:03.015548", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=False)"}
+{"timestamp": "2026-05-25T22:35:05.358732", "level": "INFO", "module": "app", "message": "Создание заявки 98f5014e"}
+{"timestamp": "2026-05-25T22:35:05.358916", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:35:05.359031", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=False)"}
+{"timestamp": "2026-05-25T22:35:05.536894", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:35:05.701720", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:35:06.543176", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:35:06.705494", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:35:08.546527", "level": "INFO", "module": "app", "message": "Создание заявки c5c7e177"}
+{"timestamp": "2026-05-25T22:35:08.546680", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:35:08.546799", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=False)"}
+{"timestamp": "2026-05-25T22:35:08.708225", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:36:15.134361", "level": "INFO", "module": "app", "message": "Создание заявки 96473553"}
+{"timestamp": "2026-05-25T22:36:15.134518", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:36:15.134621", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:36:15.134721", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:15.689477", "level": "INFO", "module": "app", "message": "Создание заявки 832f2f6c"}
+{"timestamp": "2026-05-25T22:36:15.689691", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:36:15.689806", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:36:15.689913", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:16.134994", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:36:16.135177", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:36:16.135301", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:16.690346", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:36:16.690491", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:36:16.690616", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:18.135779", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:36:18.135988", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:36:18.136125", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:18.136261", "level": "ERROR", "module": "app", "message": "Ошибка заявки 96473553: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:18.136362", "level": "WARNING", "module": "app", "message": "Компенсация заявки 96473553: откат транзакции"}
+{"timestamp": "2026-05-25T22:36:18.136457", "level": "INFO", "module": "app", "message": "Заявка 96473553 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:36:18.690946", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:36:18.691148", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:36:18.691296", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:18.691450", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:36:18.691567", "level": "ERROR", "module": "app", "message": "Ошибка заявки 832f2f6c: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:36:18.691672", "level": "WARNING", "module": "app", "message": "Компенсация заявки 832f2f6c: откат транзакции"}
+{"timestamp": "2026-05-25T22:36:18.691786", "level": "INFO", "module": "app", "message": "Заявка 832f2f6c откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:36:19.464679", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:36:20.448896", "level": "INFO", "module": "app", "message": "Создание заявки 4f0bcbd4"}
+{"timestamp": "2026-05-25T22:36:20.449291", "level": "ERROR", "module": "app", "message": "Ошибка заявки 4f0bcbd4: Circuit Breaker OPEN. Повторите через 8 сек"}
+{"timestamp": "2026-05-25T22:36:20.450279", "level": "WARNING", "module": "app", "message": "Компенсация заявки 4f0bcbd4: откат транзакции"}
+{"timestamp": "2026-05-25T22:36:20.450401", "level": "INFO", "module": "app", "message": "Заявка 4f0bcbd4 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:36:21.470980", "level": "WARNING", "module": "app", "message": "Дубликат заявки"}
+{"timestamp": "2026-05-25T22:36:22.454869", "level": "INFO", "module": "app", "message": "Создание заявки a0110bf1"}
+{"timestamp": "2026-05-25T22:36:22.455036", "level": "ERROR", "module": "app", "message": "Ошибка заявки a0110bf1: Circuit Breaker OPEN. Повторите через 6 сек"}
+{"timestamp": "2026-05-25T22:36:22.455161", "level": "WARNING", "module": "app", "message": "Компенсация заявки a0110bf1: откат транзакции"}
+{"timestamp": "2026-05-25T22:36:22.455266", "level": "INFO", "module": "app", "message": "Заявка a0110bf1 откачена (компенсация выполнена)"}
+{"timestamp": "2026-05-25T22:46:00.249144", "level": "INFO", "module": "app", "message": "Создание заявки 7f2b2118"}
+{"timestamp": "2026-05-25T22:46:00.249352", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:46:00.249472", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:00.249591", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:01.250333", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:46:01.250557", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:01.250743", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:03.251333", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:46:03.251508", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:03.251620", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:03.251733", "level": "ERROR", "module": "app", "message": "Ошибка заявки 7f2b2118: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:04.572169", "level": "INFO", "module": "app", "message": "Создание заявки 319d0360"}
+{"timestamp": "2026-05-25T22:46:04.572341", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:46:04.572448", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:04.572546", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:05.573608", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:46:05.573831", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:05.573984", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:07.574443", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:46:07.574631", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:07.574815", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:07.574960", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:46:07.575082", "level": "ERROR", "module": "app", "message": "Ошибка заявки 319d0360: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:09.881840", "level": "INFO", "module": "app", "message": "Создание заявки b89d4f49"}
+{"timestamp": "2026-05-25T22:46:09.882020", "level": "ERROR", "module": "app", "message": "Ошибка заявки b89d4f49: Circuit Breaker OPEN. Повторите через 7 сек"}
+{"timestamp": "2026-05-25T22:46:28.010798", "level": "INFO", "module": "app", "message": "Circuit Breaker сброшен"}
+{"timestamp": "2026-05-25T22:46:31.975608", "level": "INFO", "module": "app", "message": "Создание заявки ba01317b"}
+{"timestamp": "2026-05-25T22:46:31.975754", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:46:31.975860", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:31.975955", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:32.322118", "level": "INFO", "module": "app", "message": "Создание заявки 7c535704"}
+{"timestamp": "2026-05-25T22:46:32.322266", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:46:32.322372", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:32.322468", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 1): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:32.976608", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:46:32.976819", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:32.976963", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:33.322799", "level": "INFO", "module": "app", "message": "Попытка 2/3"}
+{"timestamp": "2026-05-25T22:46:33.322986", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:33.323102", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 2): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:34.977204", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:46:34.977381", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:34.977520", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:34.977657", "level": "ERROR", "module": "app", "message": "Ошибка заявки ba01317b: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:35.327238", "level": "INFO", "module": "app", "message": "Попытка 3/3"}
+{"timestamp": "2026-05-25T22:46:35.327452", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=True)"}
+{"timestamp": "2026-05-25T22:46:35.327600", "level": "WARNING", "module": "app", "message": "Ошибка (попытка 3): Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:35.327901", "level": "ERROR", "module": "app", "message": "Circuit Breaker -> OPEN (сбоев: 2)"}
+{"timestamp": "2026-05-25T22:46:35.328028", "level": "ERROR", "module": "app", "message": "Ошибка заявки 7c535704: Сервис транспорта временно недоступен"}
+{"timestamp": "2026-05-25T22:46:36.298728", "level": "INFO", "module": "app", "message": "Создание заявки 76a27732"}
+{"timestamp": "2026-05-25T22:46:36.298930", "level": "ERROR", "module": "app", "message": "Ошибка заявки 76a27732: Circuit Breaker OPEN. Повторите через 9 сек"}
+{"timestamp": "2026-05-25T22:46:36.547191", "level": "INFO", "module": "app", "message": "Создание заявки a5e0a11c"}
+{"timestamp": "2026-05-25T22:46:36.547359", "level": "ERROR", "module": "app", "message": "Ошибка заявки a5e0a11c: Circuit Breaker OPEN. Повторите через 8 сек"}
+{"timestamp": "2026-05-25T22:46:38.615689", "level": "INFO", "module": "app", "message": "Создание заявки 8ea4573f"}
+{"timestamp": "2026-05-25T22:46:38.615859", "level": "ERROR", "module": "app", "message": "Ошибка заявки 8ea4573f: Circuit Breaker OPEN. Повторите через 6 сек"}
+{"timestamp": "2026-05-25T22:46:38.852561", "level": "INFO", "module": "app", "message": "Создание заявки 0c729a8f"}
+{"timestamp": "2026-05-25T22:46:38.852702", "level": "ERROR", "module": "app", "message": "Ошибка заявки 0c729a8f: Circuit Breaker OPEN. Повторите через 6 сек"}
+{"timestamp": "2026-05-25T22:47:11.927763", "level": "INFO", "module": "app", "message": "Circuit Breaker сброшен"}
+{"timestamp": "2026-05-25T22:47:13.005011", "level": "INFO", "module": "app", "message": "Создание заявки f8313ac7"}
+{"timestamp": "2026-05-25T22:47:13.005293", "level": "INFO", "module": "app", "message": "Попытка 1/3"}
+{"timestamp": "2026-05-25T22:47:13.005433", "level": "INFO", "module": "app", "message": "Вызов внешнего сервиса (fail=False)"}
