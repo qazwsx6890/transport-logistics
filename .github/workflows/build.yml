@@ -1,0 +1,27 @@
+name: Build Check
+
+on: [push]
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check all files exist
+        run: |
+          test -f request_service.py && echo "✅ request_service.py OK"
+          test -f transport_service.cs && echo "✅ transport_service.cs OK"  
+          test -f route_service.js && echo "✅ route_service.js OK"
+          test -f package.json && echo "✅ package.json OK"
+      
+      - name: Validate JSON syntax
+        run: |
+          cat package.json | python -m json.tool > /dev/null && echo "✅ package.json is valid JSON"
+      
+      - name: Validate Python syntax
+        run: python -m py_compile request_service.py
+      
+      - name: Validate Node.js syntax
+        run: node -c route_service.js
