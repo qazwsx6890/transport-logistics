@@ -427,6 +427,173 @@ def reset_circuit():
 def index():
     return render_template_string(HTML_TEMPLATE)
 
+@app.route('/swagger')
+def swagger():
+    return '<html><head><title>API</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui-bundle.min.js"></script></head><body><div id="swagger-ui"></div><script>window.onload=()=>{SwaggerUIBundle({url:"/openapi.json",dom_id:"#swagger-ui"})}</script></body></html>'
+
+@app.route('/openapi.json')
+def openapi():
+    return {
+        "openapi": "3.0.0",
+        "info": {
+            "title": "Транспортная логистика API",
+            "version": "1.0.0",
+            "description": "API для управления заявками на перевозку"
+        },
+        "servers": [
+            {"url": "http://localhost:5000", "description": "Local server"}
+        ],
+        "paths": {
+            "/api/create-request": {
+                "post": {
+                    "summary": "Создание заявки на перевозку",
+                    "description": "Создаёт новую заявку, проверяет транспорт, строит маршрут",
+                    "requestBody": {
+                        "required": True,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "weight": {
+                                            "type": "integer",
+                                            "example": 5000,
+                                            "description": "Вес груза в кг"
+                                        },
+                                        "pickup": {
+                                            "type": "string",
+                                            "example": "Москва, ул. Тверская 1",
+                                            "description": "Адрес загрузки"
+                                        },
+                                        "delivery": {
+                                            "type": "string",
+                                            "example": "Санкт-Петербург, Невский пр. 10",
+                                            "description": "Адрес доставки"
+                                        },
+                                        "force_error": {
+                                            "type": "boolean",
+                                            "example": False,
+                                            "description": "Принудительная ошибка для теста"
+                                        }
+                                    },
+                                    "required": ["weight", "pickup", "delivery"]
+                                }
+                            }
+                        }
+                    },
+                    "responses": {
+                        "200": {
+                            "description": "Успешное создание",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {"type": "string", "example": "success"},
+                                            "request_id": {"type": "string", "example": "a1b2c3d4"},
+                                            "message": {"type": "string"}
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "500": {
+                            "description": "Ошибка выполнения",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {"type": "string", "example": "error"},
+                                            "error": {"type": "string"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/requests": {
+                "get": {
+                    "summary": "История заявок",
+                    "description": "Возвращает список всех созданных заявок",
+                    "responses": {
+                        "200": {
+                            "description": "Список заявок",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {"type": "string"},
+                                                "weight": {"type": "integer"},
+                                                "pickup": {"type": "string"},
+                                                "delivery": {"type": "string"},
+                                                "status": {"type": "string"},
+                                                "date": {"type": "string"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/circuit-status": {
+                "get": {
+                    "summary": "Статус Circuit Breaker",
+                    "description": "Возвращает текущее состояние Circuit Breaker",
+                    "responses": {
+                        "200": {
+                            "description": "Текущий статус",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "state": {"type": "string", "example": "CLOSED"},
+                                            "failure_count": {"type": "integer"},
+                                            "failure_threshold": {"type": "integer"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/reset-circuit": {
+                "post": {
+                    "summary": "Сброс Circuit Breaker",
+                    "description": "Принудительно сбрасывает Circuit Breaker в состояние CLOSED",
+                    "responses": {
+                        "200": {
+                            "description": "Сброс выполнен",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "status": {"type": "string", "example": "ok"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "tags": [
+            {"name": "Заявки", "description": "Операции с заявками"},
+            {"name": "Мониторинг", "description": "Статусы и сброс"}
+        ]
+    }
+
 if __name__ == '__main__':
     print("=" * 60)
     print("ТРАНСПОРТНАЯ ЛОГИСТИКА - ЗАПУЩЕНА (с оптимизацией)")
